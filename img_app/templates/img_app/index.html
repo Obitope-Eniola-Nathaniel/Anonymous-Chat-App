@@ -1,0 +1,19 @@
+{% extends "img_app/base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+
+    {% for post in posts %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ post.document.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.text }} </h5>
+                <p class="card-text">{{ post.uploaded_at}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
